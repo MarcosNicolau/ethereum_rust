@@ -1,0 +1,679 @@
+Successfully tagged hive/simulators/ethereum/engine:latest
+INFO[09-09|10:31:58] creating output directory                folder=workspace/logs
+INFO[09-09|10:31:58] running simulation: ethereum/engine 
+INFO[09-09|10:31:58] hiveproxy started                        container=2e6e1b4e8b96 addr=172.17.0.2:8081
+INFO[09-09|10:31:58] API: suite started                       suite=0 name=engine-auth
+INFO[09-09|10:31:58] API: test started                        suite=0 test=1 name="engine-auth test loader"
+[41f56239] parallelism 1
+[41f56239] random_seed 1725888718
+INFO[09-09|10:31:58] API: test started                        suite=0 test=2 name="JWT Authentication: No time drift, correct secret (Paris) (ethereumrust)"
+[22e8c719] + export RUST_LOG_STYLE=never
+[22e8c719] + RUST_LOG_STYLE=never
+[22e8c719] + ethereum_rust=./ethereum_rust
+[22e8c719] + mv /genesis.json /genesis-input.json
+[22e8c719] + jq -f /mapper.jq /genesis-input.json
+[22e8c719] Supplied genesis state (trimmed, use --sim.loglevel 4 or 5 for full output):
+[22e8c719] + '[' 3 -lt 4 ']'
+[22e8c719] + echo 'Supplied genesis state (trimmed, use --sim.loglevel 4 or 5 for full output):'
+[22e8c719] + jq 'del(.alloc[] | select(.balance == "0x123450000000000000000"))' /genesis.json
+[22e8c719] {
+[22e8c719]   "config": {
+[22e8c719]     "ethash": {},
+[22e8c719]     "chainId": 7,
+[22e8c719]     "homesteadBlock": 0,
+[22e8c719]     "eip150Block": 0,
+[22e8c719]     "eip155Block": 0,
+[22e8c719]     "eip158Block": 0,
+[22e8c719]     "byzantiumBlock": 0,
+[22e8c719]     "constantinopleBlock": 0,
+[22e8c719]     "petersburgBlock": 0,
+[22e8c719]     "istanbulBlock": 0,
+[22e8c719]     "muirGlacierBlock": 0,
+[22e8c719]     "berlinBlock": 0,
+[22e8c719]     "londonBlock": 0,
+[22e8c719]     "mergeNetsplitBlock": 100,
+[22e8c719]     "terminalTotalDifficulty": 196608
+[22e8c719]   },
+[22e8c719]   "nonce": "0x0",
+[22e8c719]   "timestamp": "0x1234",
+[22e8c719]   "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000658bdf435d810c91414ec09147daa6db624063790000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+[22e8c719]   "gasLimit": "0x2fefd8",
+[22e8c719]   "difficulty": "0x30000",
+[22e8c719]   "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+[22e8c719]   "coinbase": "0x0000000000000000000000000000000000000000",
+[22e8c719]   "alloc": {
+[22e8c719]     "0000000000000000000000000000000000000314": {
+[22e8c719]       "code": "0x60606040526000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063a223e05d1461006a578063abd1a0cf1461008d578063abfced1d146100d4578063e05c914a14610110578063e6768b451461014c575b610000565b346100005761007761019d565b6040518082815260200191505060405180910390f35b34610000576100be600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506101a3565b6040518082815260200191505060405180910390f35b346100005761010e600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919080359060200190919050506101ed565b005b346100005761014a600480803590602001909190803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610236565b005b346100005761017960048080359060200190919080359060200190919080359060200190919050506103c4565b60405180848152602001838152602001828152602001935050505060405180910390f35b60005481565b6000600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205490505b919050565b80600160008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055505b5050565b7f6031a8d62d7c95988fa262657cd92107d90ed96e08d8f867d32f26edfe85502260405180905060405180910390a17f47e2689743f14e97f7dcfa5eec10ba1dff02f83b3d1d4b9c07b206cbbda66450826040518082815260200191505060405180910390a1817fa48a6b249a5084126c3da369fbc9b16827ead8cb5cdc094b717d3f1dcd995e2960405180905060405180910390a27f7890603b316f3509577afd111710f9ebeefa15e12f72347d9dffd0d65ae3bade81604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390a18073ffffffffffffffffffffffffffffffffffffffff167f7efef9ea3f60ddc038e50cccec621f86a0195894dc0520482abf8b5c6b659e4160405180905060405180910390a28181604051808381526020018273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019250505060405180910390a05b5050565b6000600060008585859250925092505b935093509390505600a165627a7a72305820aaf842d0d0c35c45622c5263cbb54813d2974d3999c8c38551d7c613ea2bc1170029",
+[22e8c719]       "storage": {
+[22e8c719]         "0x0000000000000000000000000000000000000000000000000000000000000000": "0x0000000000000000000000000000000000000000000000000000000000001234",
+[22e8c719]         "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9": "0x0000000000000000000000000000000000000000000000000000000000000001"
+[22e8c719]       },
+[22e8c719]       "balance": "0x0"
+[22e8c719]     },
+[22e8c719]     "0000000000000000000000000000000000000315": {
+[22e8c719]       "code": "0x60606040526000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063ef2769ca1461003e575b610000565b3461000057610078600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803590602001909190505061007a565b005b8173ffffffffffffffffffffffffffffffffffffffff166108fc829081150290604051809050600060405180830381858888f1935050505015610106578173ffffffffffffffffffffffffffffffffffffffff167f30a3c50752f2552dcc2b93f5b96866280816a986c0c0408cb6778b9fa198288f826040518082815260200191505060405180910390a25b5b50505600a165627a7a72305820637991fabcc8abad4294bf2bb615db78fbec4edff1635a2647d3894e2daf6a610029",
+[22e8c719]       "balance": "0x9999999999999999999999999999999"
+[22e8c719]     },
+[22e8c719]     "0000000000000000000000000000000000000316": {
+[22e8c719]       "code": "0x444355",
+[22e8c719]       "balance": "0x0"
+[22e8c719]     },
+[22e8c719]     "0000000000000000000000000000000000000317": {
+[22e8c719]       "code": "0x600160003555",
+[22e8c719]       "balance": "0x0"
+[22e8c719]     }
+[22e8c719]   },
+[22e8c719]   "number": "0x0",
+[22e8c719]   "gasUsed": "0x0",
+[22e8c719]   "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+[22e8c719]   "baseFeePerGas": null,
+[22e8c719]   "excessBlobGas": null,
+[22e8c719]   "blobGasUsed": null
+[22e8c719] }
+[22e8c719] + echo 'Command flags till now:'
+[22e8c719] + echo
+[22e8c719] + FLAGS=' --network /genesis.json'
+[22e8c719] + set +ex
+[22e8c719] Command flags till now:
+[22e8c719] 
+[22e8c719] Loading initial blockchain...
+[22e8c719] Warning: chain.rlp not found.
+[22e8c719] Warning: blocks folder not found.
+[22e8c719] Running ethereum_rust with flags:  --network /genesis.json --http.addr=0.0.0.0  --authrpc.addr=0.0.0.0  --authrpc.jwtsecret=/jwt.secret
+[22e8c719] 2024-09-09T13:31:59.163337Z  WARN ethereum_rust: No bootnodes specified. This node will not be able to connect to the network.
+[22e8c719] 2024-09-09T13:31:59.163449Z  INFO ethereum_rust_storage: Starting storage engine (InMemory)
+[22e8c719] 2024-09-09T13:31:59.163543Z  INFO ethereum_rust_storage: Started store engine
+[22e8c719] 2024-09-09T13:31:59.164563Z  INFO ethereum_rust_storage: Storing initial state from genesis
+[22e8c719] 2024-09-09T13:31:59.168518Z  INFO ethereum_rust_net: Starting discovery service at 0.0.0.0:30303
+[22e8c719] 2024-09-09T13:31:59.168553Z  INFO ethereum_rust_net: Listening for requests at 0.0.0.0:30303
+[22e8c719] 2024-09-09T13:31:59.168651Z  INFO ethereum_rust_rpc: Starting HTTP server at 0.0.0.0:8545
+[22e8c719] 2024-09-09T13:31:59.168665Z  INFO ethereum_rust_rpc: Starting Auth-RPC server at 0.0.0.0:8551
+[2e6e1b4e] 2024/09/09 13:31:59 checking address: 172.17.0.4:8545
+INFO[09-09|10:31:59] API: client ethereumrust started         suite=0 test=2 container=22e8c719
+[41f56239] Start test (ethereumrust): JWT Authentication: No time drift, correct secret (Paris)
+[41f56239] CLMocker: Adding engine client 22e8c719
+[41f56239] >> (22e8c719) {"jsonrpc":"2.0","id":1,"method":"engine_exchangeTransitionConfigurationV1","params":[{"terminalTotalDifficulty":"0x30000","terminalBlockHash":"0x0000000000000000000000000000000000000000000000000000000000000000","terminalBlockNumber":"0x0"}]}
+[41f56239] << (22e8c719) {"id":1,"jsonrpc":"2.0","error":{"code":-32601,"message":"Method not found"}}
+[41f56239] FAIL (JWT Authentication: No time drift, correct secret): Authentication was supposed to pass authentication but failed: Method not found
+[41f56239] CLMocker: Closing engine client 22e8c719
+[41f56239] CLMocker: Closed engine client 22e8c719
+[41f56239] End test (ethereumrust): JWT Authentication: No time drift, correct secret (Paris)
+INFO[09-09|10:31:59] API: test ended                          suite=0 test=2 pass=false
+INFO[09-09|10:31:59] API: test started                        suite=0 test=3 name="JWT Authentication: No time drift, incorrect secret (shorter) (Paris) (ethereumrust)"
+[055c304f] + export RUST_LOG_STYLE=never
+[055c304f] + RUST_LOG_STYLE=never
+[055c304f] + ethereum_rust=./ethereum_rust
+[055c304f] + mv /genesis.json /genesis-input.json
+[055c304f] + jq -f /mapper.jq /genesis-input.json
+[055c304f] Supplied genesis state (trimmed, use --sim.loglevel 4 or 5 for full output):
+[055c304f] + '[' 3 -lt 4 ']'
+[055c304f] + echo 'Supplied genesis state (trimmed, use --sim.loglevel 4 or 5 for full output):'
+[055c304f] + jq 'del(.alloc[] | select(.balance == "0x123450000000000000000"))' /genesis.json
+[055c304f] {
+[055c304f]   "config": {
+[055c304f]     "ethash": {},
+[055c304f]     "chainId": 7,
+[055c304f]     "homesteadBlock": 0,
+[055c304f]     "eip150Block": 0,
+[055c304f]     "eip155Block": 0,
+[055c304f]     "eip158Block": 0,
+[055c304f]     "byzantiumBlock": 0,
+[055c304f]     "constantinopleBlock": 0,
+[055c304f]     "petersburgBlock": 0,
+[055c304f]     "istanbulBlock": 0,
+[055c304f]     "muirGlacierBlock": 0,
+[055c304f]     "berlinBlock": 0,
+[055c304f]     "londonBlock": 0,
+[055c304f]     "mergeNetsplitBlock": 100,
+[055c304f]     "terminalTotalDifficulty": 196608
+[055c304f]   },
+[055c304f]   "nonce": "0x0",
+[055c304f]   "timestamp": "0x1234",
+[055c304f]   "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000658bdf435d810c91414ec09147daa6db624063790000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+[055c304f]   "gasLimit": "0x2fefd8",
+[055c304f]   "difficulty": "0x30000",
+[055c304f]   "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+[055c304f]   "coinbase": "0x0000000000000000000000000000000000000000",
+[055c304f]   "alloc": {
+[055c304f]     "0000000000000000000000000000000000000314": {
+[055c304f]       "code": "0x60606040526000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063a223e05d1461006a578063abd1a0cf1461008d578063abfced1d146100d4578063e05c914a14610110578063e6768b451461014c575b610000565b346100005761007761019d565b6040518082815260200191505060405180910390f35b34610000576100be600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506101a3565b6040518082815260200191505060405180910390f35b346100005761010e600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919080359060200190919050506101ed565b005b346100005761014a600480803590602001909190803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610236565b005b346100005761017960048080359060200190919080359060200190919080359060200190919050506103c4565b60405180848152602001838152602001828152602001935050505060405180910390f35b60005481565b6000600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205490505b919050565b80600160008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055505b5050565b7f6031a8d62d7c95988fa262657cd92107d90ed96e08d8f867d32f26edfe85502260405180905060405180910390a17f47e2689743f14e97f7dcfa5eec10ba1dff02f83b3d1d4b9c07b206cbbda66450826040518082815260200191505060405180910390a1817fa48a6b249a5084126c3da369fbc9b16827ead8cb5cdc094b717d3f1dcd995e2960405180905060405180910390a27f7890603b316f3509577afd111710f9ebeefa15e12f72347d9dffd0d65ae3bade81604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390a18073ffffffffffffffffffffffffffffffffffffffff167f7efef9ea3f60ddc038e50cccec621f86a0195894dc0520482abf8b5c6b659e4160405180905060405180910390a28181604051808381526020018273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019250505060405180910390a05b5050565b6000600060008585859250925092505b935093509390505600a165627a7a72305820aaf842d0d0c35c45622c5263cbb54813d2974d3999c8c38551d7c613ea2bc1170029",
+[055c304f]       "storage": {
+[055c304f]         "0x0000000000000000000000000000000000000000000000000000000000000000": "0x0000000000000000000000000000000000000000000000000000000000001234",
+[055c304f]         "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9": "0x0000000000000000000000000000000000000000000000000000000000000001"
+[055c304f]       },
+[055c304f]       "balance": "0x0"
+[055c304f]     },
+[055c304f]     "0000000000000000000000000000000000000315": {
+[055c304f]       "code": "0x60606040526000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063ef2769ca1461003e575b610000565b3461000057610078600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803590602001909190505061007a565b005b8173ffffffffffffffffffffffffffffffffffffffff166108fc829081150290604051809050600060405180830381858888f1935050505015610106578173ffffffffffffffffffffffffffffffffffffffff167f30a3c50752f2552dcc2b93f5b96866280816a986c0c0408cb6778b9fa198288f826040518082815260200191505060405180910390a25b5b50505600a165627a7a72305820637991fabcc8abad4294bf2bb615db78fbec4edff1635a2647d3894e2daf6a610029",
+[055c304f]       "balance": "0x9999999999999999999999999999999"
+[055c304f]     },
+[055c304f]     "0000000000000000000000000000000000000316": {
+[055c304f]       "code": "0x444355",
+[055c304f]       "balance": "0x0"
+[055c304f]     },
+[055c304f]     "0000000000000000000000000000000000000317": {
+[055c304f]       "code": "0x600160003555",
+[055c304f]       "balance": "0x0"
+[055c304f]     }
+[055c304f]   },
+[055c304f]   "number": "0x0",
+[055c304f]   "gasUsed": "0x0",
+[055c304f]   "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+[055c304f]   "baseFeePerGas": null,
+[055c304f]   "excessBlobGas": null,
+[055c304f]   "blobGasUsed": null
+[055c304f] }
+[055c304f] + echo 'Command flags till now:'
+[055c304f] + echo
+[055c304f] + FLAGS=' --network /genesis.json'
+[055c304f] + set +ex
+[055c304f] Command flags till now:
+[055c304f] 
+[055c304f] Loading initial blockchain...
+[055c304f] Warning: chain.rlp not found.
+[055c304f] Warning: blocks folder not found.
+[055c304f] Running ethereum_rust with flags:  --network /genesis.json --http.addr=0.0.0.0  --authrpc.addr=0.0.0.0  --authrpc.jwtsecret=/jwt.secret
+[055c304f] 2024-09-09T13:31:59.801355Z  WARN ethereum_rust: No bootnodes specified. This node will not be able to connect to the network.
+[055c304f] 2024-09-09T13:31:59.801392Z  INFO ethereum_rust_storage: Starting storage engine (InMemory)
+[055c304f] 2024-09-09T13:31:59.801397Z  INFO ethereum_rust_storage: Started store engine
+[055c304f] 2024-09-09T13:31:59.802593Z  INFO ethereum_rust_storage: Storing initial state from genesis
+[055c304f] 2024-09-09T13:31:59.805994Z  INFO ethereum_rust_net: Starting discovery service at 0.0.0.0:30303
+[055c304f] 2024-09-09T13:31:59.806008Z  INFO ethereum_rust_net: Listening for requests at 0.0.0.0:30303
+[055c304f] 2024-09-09T13:31:59.806048Z  INFO ethereum_rust_rpc: Starting HTTP server at 0.0.0.0:8545
+[055c304f] 2024-09-09T13:31:59.806051Z  INFO ethereum_rust_rpc: Starting Auth-RPC server at 0.0.0.0:8551
+[2e6e1b4e] 2024/09/09 13:31:59 checking address: 172.17.0.4:8545
+INFO[09-09|10:31:59] API: client ethereumrust started         suite=0 test=3 container=055c304f
+[41f56239] Start test (ethereumrust): JWT Authentication: No time drift, incorrect secret (shorter) (Paris)
+[41f56239] CLMocker: Adding engine client 055c304f
+[41f56239] >> (055c304f) {"jsonrpc":"2.0","id":1,"method":"engine_exchangeTransitionConfigurationV1","params":[{"terminalTotalDifficulty":"0x30000","terminalBlockHash":"0x0000000000000000000000000000000000000000000000000000000000000000","terminalBlockNumber":"0x0"}]}
+[41f56239] << (055c304f) {"id":1,"jsonrpc":"2.0","error":{"code":-32000,"message":"Auth failed: Invalid or missing token"}}
+[41f56239] CLMocker: Closing engine client 055c304f
+[41f56239] CLMocker: Closed engine client 055c304f
+[41f56239] End test (ethereumrust): JWT Authentication: No time drift, incorrect secret (shorter) (Paris)
+INFO[09-09|10:32:00] API: test ended                          suite=0 test=3 pass=true
+INFO[09-09|10:32:00] API: test started                        suite=0 test=4 name="JWT Authentication: No time drift, incorrect secret (longer) (Paris) (ethereumrust)"
+[9014b629] + export RUST_LOG_STYLE=never
+[9014b629] + RUST_LOG_STYLE=never
+[9014b629] + ethereum_rust=./ethereum_rust
+[9014b629] + mv /genesis.json /genesis-input.json
+[9014b629] + jq -f /mapper.jq /genesis-input.json
+[9014b629] + '[' 3 -lt 4 ']'
+[9014b629] + echo 'Supplied genesis state (trimmed, use --sim.loglevel 4 or 5 for full output):'
+[9014b629] + jq 'del(.alloc[] | select(.balance == "0x123450000000000000000"))' /genesis.json
+[9014b629] Supplied genesis state (trimmed, use --sim.loglevel 4 or 5 for full output):
+[9014b629] {
+[9014b629]   "config": {
+[9014b629]     "ethash": {},
+[9014b629]     "chainId": 7,
+[9014b629]     "homesteadBlock": 0,
+[9014b629]     "eip150Block": 0,
+[9014b629]     "eip155Block": 0,
+[9014b629]     "eip158Block": 0,
+[9014b629]     "byzantiumBlock": 0,
+[9014b629]     "constantinopleBlock": 0,
+[9014b629]     "petersburgBlock": 0,
+[9014b629]     "istanbulBlock": 0,
+[9014b629]     "muirGlacierBlock": 0,
+[9014b629]     "berlinBlock": 0,
+[9014b629]     "londonBlock": 0,
+[9014b629]     "mergeNetsplitBlock": 100,
+[9014b629]     "terminalTotalDifficulty": 196608
+[9014b629]   },
+[9014b629]   "nonce": "0x0",
+[9014b629]   "timestamp": "0x1234",
+[9014b629]   "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000658bdf435d810c91414ec09147daa6db624063790000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+[9014b629]   "gasLimit": "0x2fefd8",
+[9014b629]   "difficulty": "0x30000",
+[9014b629]   "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+[9014b629]   "coinbase": "0x0000000000000000000000000000000000000000",
+[9014b629]   "alloc": {
+[9014b629]     "0000000000000000000000000000000000000314": {
+[9014b629]       "code": "0x60606040526000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063a223e05d1461006a578063abd1a0cf1461008d578063abfced1d146100d4578063e05c914a14610110578063e6768b451461014c575b610000565b346100005761007761019d565b6040518082815260200191505060405180910390f35b34610000576100be600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506101a3565b6040518082815260200191505060405180910390f35b346100005761010e600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919080359060200190919050506101ed565b005b346100005761014a600480803590602001909190803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610236565b005b346100005761017960048080359060200190919080359060200190919080359060200190919050506103c4565b60405180848152602001838152602001828152602001935050505060405180910390f35b60005481565b6000600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205490505b919050565b80600160008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055505b5050565b7f6031a8d62d7c95988fa262657cd92107d90ed96e08d8f867d32f26edfe85502260405180905060405180910390a17f47e2689743f14e97f7dcfa5eec10ba1dff02f83b3d1d4b9c07b206cbbda66450826040518082815260200191505060405180910390a1817fa48a6b249a5084126c3da369fbc9b16827ead8cb5cdc094b717d3f1dcd995e2960405180905060405180910390a27f7890603b316f3509577afd111710f9ebeefa15e12f72347d9dffd0d65ae3bade81604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390a18073ffffffffffffffffffffffffffffffffffffffff167f7efef9ea3f60ddc038e50cccec621f86a0195894dc0520482abf8b5c6b659e4160405180905060405180910390a28181604051808381526020018273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019250505060405180910390a05b5050565b6000600060008585859250925092505b935093509390505600a165627a7a72305820aaf842d0d0c35c45622c5263cbb54813d2974d3999c8c38551d7c613ea2bc1170029",
+[9014b629]       "storage": {
+[9014b629]         "0x0000000000000000000000000000000000000000000000000000000000000000": "0x0000000000000000000000000000000000000000000000000000000000001234",
+[9014b629]         "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9": "0x0000000000000000000000000000000000000000000000000000000000000001"
+[9014b629]       },
+[9014b629]       "balance": "0x0"
+[9014b629]     },
+[9014b629]     "0000000000000000000000000000000000000315": {
+[9014b629]       "code": "0x60606040526000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063ef2769ca1461003e575b610000565b3461000057610078600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803590602001909190505061007a565b005b8173ffffffffffffffffffffffffffffffffffffffff166108fc829081150290604051809050600060405180830381858888f1935050505015610106578173ffffffffffffffffffffffffffffffffffffffff167f30a3c50752f2552dcc2b93f5b96866280816a986c0c0408cb6778b9fa198288f826040518082815260200191505060405180910390a25b5b50505600a165627a7a72305820637991fabcc8abad4294bf2bb615db78fbec4edff1635a2647d3894e2daf6a610029",
+[9014b629]       "balance": "0x9999999999999999999999999999999"
+[9014b629]     },
+[9014b629]     "0000000000000000000000000000000000000316": {
+[9014b629]       "code": "0x444355",
+[9014b629]       "balance": "0x0"
+[9014b629]     },
+[9014b629]     "0000000000000000000000000000000000000317": {
+[9014b629]       "code": "0x600160003555",
+[9014b629]       "balance": "0x0"
+[9014b629]     }
+[9014b629]   },
+[9014b629]   "number": "0x0",
+[9014b629]   "gasUsed": "0x0",
+[9014b629]   "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+[9014b629]   "baseFeePerGas": null,
+[9014b629]   "excessBlobGas": null,
+[9014b629]   "blobGasUsed": null
+[9014b629] }
+[9014b629] Command flags till now:
+[9014b629] 
+[9014b629] Loading initial blockchain...
+[9014b629] + echo 'Command flags till now:'
+[9014b629] + echo
+[9014b629] + FLAGS=' --network /genesis.json'
+[9014b629] + set +ex
+[9014b629] Warning: chain.rlp not found.
+[9014b629] Warning: blocks folder not found.
+[9014b629] Running ethereum_rust with flags:  --network /genesis.json --http.addr=0.0.0.0  --authrpc.addr=0.0.0.0  --authrpc.jwtsecret=/jwt.secret
+[9014b629] 2024-09-09T13:32:00.403535Z  WARN ethereum_rust: No bootnodes specified. This node will not be able to connect to the network.
+[9014b629] 2024-09-09T13:32:00.403552Z  INFO ethereum_rust_storage: Starting storage engine (InMemory)
+[9014b629] 2024-09-09T13:32:00.403556Z  INFO ethereum_rust_storage: Started store engine
+[9014b629] 2024-09-09T13:32:00.404704Z  INFO ethereum_rust_storage: Storing initial state from genesis
+[9014b629] 2024-09-09T13:32:00.408925Z  INFO ethereum_rust_rpc: Starting HTTP server at 0.0.0.0:8545
+[9014b629] 2024-09-09T13:32:00.408939Z  INFO ethereum_rust_rpc: Starting Auth-RPC server at 0.0.0.0:8551
+[9014b629] 2024-09-09T13:32:00.408951Z  INFO ethereum_rust_net: Starting discovery service at 0.0.0.0:30303
+[9014b629] 2024-09-09T13:32:00.408966Z  INFO ethereum_rust_net: Listening for requests at 0.0.0.0:30303
+[2e6e1b4e] 2024/09/09 13:32:00 checking address: 172.17.0.4:8545
+INFO[09-09|10:32:00] API: client ethereumrust started         suite=0 test=4 container=9014b629
+[41f56239] Start test (ethereumrust): JWT Authentication: No time drift, incorrect secret (longer) (Paris)
+[41f56239] CLMocker: Adding engine client 9014b629
+[41f56239] >> (9014b629) {"jsonrpc":"2.0","id":1,"method":"engine_exchangeTransitionConfigurationV1","params":[{"terminalTotalDifficulty":"0x30000","terminalBlockHash":"0x0000000000000000000000000000000000000000000000000000000000000000","terminalBlockNumber":"0x0"}]}
+[41f56239] << (9014b629) {"id":1,"jsonrpc":"2.0","error":{"code":-32000,"message":"Auth failed: Invalid or missing token"}}
+[41f56239] CLMocker: Closing engine client 9014b629
+[41f56239] CLMocker: Closed engine client 9014b629
+[41f56239] End test (ethereumrust): JWT Authentication: No time drift, incorrect secret (longer) (Paris)
+INFO[09-09|10:32:00] API: test ended                          suite=0 test=4 pass=true
+INFO[09-09|10:32:00] API: test started                        suite=0 test=5 name="JWT Authentication: Negative time drift, exceeding limit, correct secret (Paris) (ethereumrust)"
+[f5d1a703] + export RUST_LOG_STYLE=never
+[f5d1a703] + RUST_LOG_STYLE=never
+[f5d1a703] + ethereum_rust=./ethereum_rust
+[f5d1a703] + mv /genesis.json /genesis-input.json
+[f5d1a703] + jq -f /mapper.jq /genesis-input.json
+[f5d1a703] + '[' 3 -lt 4 ']'
+[f5d1a703] + echo 'Supplied genesis state (trimmed, use --sim.loglevel 4 or 5 for full output):'
+[f5d1a703] + jq 'del(.alloc[] | select(.balance == "0x123450000000000000000"))' /genesis.json
+[f5d1a703] Supplied genesis state (trimmed, use --sim.loglevel 4 or 5 for full output):
+[f5d1a703] {
+[f5d1a703]   "config": {
+[f5d1a703]     "ethash": {},
+[f5d1a703]     "chainId": 7,
+[f5d1a703]     "homesteadBlock": 0,
+[f5d1a703]     "eip150Block": 0,
+[f5d1a703]     "eip155Block": 0,
+[f5d1a703]     "eip158Block": 0,
+[f5d1a703]     "byzantiumBlock": 0,
+[f5d1a703]     "constantinopleBlock": 0,
+[f5d1a703]     "petersburgBlock": 0,
+[f5d1a703]     "istanbulBlock": 0,
+[f5d1a703]     "muirGlacierBlock": 0,
+[f5d1a703]     "berlinBlock": 0,
+[f5d1a703]     "londonBlock": 0,
+[f5d1a703]     "mergeNetsplitBlock": 100,
+[f5d1a703]     "terminalTotalDifficulty": 196608
+[f5d1a703]   },
+[f5d1a703]   "nonce": "0x0",
+[f5d1a703]   "timestamp": "0x1234",
+[f5d1a703]   "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000658bdf435d810c91414ec09147daa6db624063790000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+[f5d1a703]   "gasLimit": "0x2fefd8",
+[f5d1a703]   "difficulty": "0x30000",
+[f5d1a703]   "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+[f5d1a703]   "coinbase": "0x0000000000000000000000000000000000000000",
+[f5d1a703]   "alloc": {
+[f5d1a703]     "0000000000000000000000000000000000000314": {
+[f5d1a703]       "code": "0x60606040526000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063a223e05d1461006a578063abd1a0cf1461008d578063abfced1d146100d4578063e05c914a14610110578063e6768b451461014c575b610000565b346100005761007761019d565b6040518082815260200191505060405180910390f35b34610000576100be600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506101a3565b6040518082815260200191505060405180910390f35b346100005761010e600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919080359060200190919050506101ed565b005b346100005761014a600480803590602001909190803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610236565b005b346100005761017960048080359060200190919080359060200190919080359060200190919050506103c4565b60405180848152602001838152602001828152602001935050505060405180910390f35b60005481565b6000600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205490505b919050565b80600160008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055505b5050565b7f6031a8d62d7c95988fa262657cd92107d90ed96e08d8f867d32f26edfe85502260405180905060405180910390a17f47e2689743f14e97f7dcfa5eec10ba1dff02f83b3d1d4b9c07b206cbbda66450826040518082815260200191505060405180910390a1817fa48a6b249a5084126c3da369fbc9b16827ead8cb5cdc094b717d3f1dcd995e2960405180905060405180910390a27f7890603b316f3509577afd111710f9ebeefa15e12f72347d9dffd0d65ae3bade81604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390a18073ffffffffffffffffffffffffffffffffffffffff167f7efef9ea3f60ddc038e50cccec621f86a0195894dc0520482abf8b5c6b659e4160405180905060405180910390a28181604051808381526020018273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019250505060405180910390a05b5050565b6000600060008585859250925092505b935093509390505600a165627a7a72305820aaf842d0d0c35c45622c5263cbb54813d2974d3999c8c38551d7c613ea2bc1170029",
+[f5d1a703]       "storage": {
+[f5d1a703]         "0x0000000000000000000000000000000000000000000000000000000000000000": "0x0000000000000000000000000000000000000000000000000000000000001234",
+[f5d1a703]         "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9": "0x0000000000000000000000000000000000000000000000000000000000000001"
+[f5d1a703]       },
+[f5d1a703]       "balance": "0x0"
+[f5d1a703]     },
+[f5d1a703]     "0000000000000000000000000000000000000315": {
+[f5d1a703]       "code": "0x60606040526000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063ef2769ca1461003e575b610000565b3461000057610078600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803590602001909190505061007a565b005b8173ffffffffffffffffffffffffffffffffffffffff166108fc829081150290604051809050600060405180830381858888f1935050505015610106578173ffffffffffffffffffffffffffffffffffffffff167f30a3c50752f2552dcc2b93f5b96866280816a986c0c0408cb6778b9fa198288f826040518082815260200191505060405180910390a25b5b50505600a165627a7a72305820637991fabcc8abad4294bf2bb615db78fbec4edff1635a2647d3894e2daf6a610029",
+[f5d1a703]       "balance": "0x9999999999999999999999999999999"
+[f5d1a703]     },
+[f5d1a703]     "0000000000000000000000000000000000000316": {
+[f5d1a703]       "code": "0x444355",
+[f5d1a703]       "balance": "0x0"
+[f5d1a703]     },
+[f5d1a703]     "0000000000000000000000000000000000000317": {
+[f5d1a703]       "code": "0x600160003555",
+[f5d1a703]       "balance": "0x0"
+[f5d1a703]     }
+[f5d1a703]   },
+[f5d1a703]   "number": "0x0",
+[f5d1a703]   "gasUsed": "0x0",
+[f5d1a703]   "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+[f5d1a703]   "baseFeePerGas": null,
+[f5d1a703]   "excessBlobGas": null,
+[f5d1a703]   "blobGasUsed": null
+[f5d1a703] }
+[f5d1a703] + echo 'Command flags till now:'
+[f5d1a703] + echo
+[f5d1a703] + FLAGS=' --network /genesis.json'
+[f5d1a703] + set +ex
+[f5d1a703] Command flags till now:
+[f5d1a703] 
+[f5d1a703] Loading initial blockchain...
+[f5d1a703] Warning: chain.rlp not found.
+[f5d1a703] Warning: blocks folder not found.
+[f5d1a703] Running ethereum_rust with flags:  --network /genesis.json --http.addr=0.0.0.0  --authrpc.addr=0.0.0.0  --authrpc.jwtsecret=/jwt.secret
+[f5d1a703] 2024-09-09T13:32:01.034323Z  WARN ethereum_rust: No bootnodes specified. This node will not be able to connect to the network.
+[f5d1a703] 2024-09-09T13:32:01.034341Z  INFO ethereum_rust_storage: Starting storage engine (InMemory)
+[f5d1a703] 2024-09-09T13:32:01.034345Z  INFO ethereum_rust_storage: Started store engine
+[f5d1a703] 2024-09-09T13:32:01.035240Z  INFO ethereum_rust_storage: Storing initial state from genesis
+[f5d1a703] 2024-09-09T13:32:01.038213Z  INFO ethereum_rust_net: Starting discovery service at 0.0.0.0:30303
+[f5d1a703] 2024-09-09T13:32:01.038223Z  INFO ethereum_rust_net: Listening for requests at 0.0.0.0:30303
+[f5d1a703] 2024-09-09T13:32:01.038263Z  INFO ethereum_rust_rpc: Starting HTTP server at 0.0.0.0:8545
+[f5d1a703] 2024-09-09T13:32:01.038271Z  INFO ethereum_rust_rpc: Starting Auth-RPC server at 0.0.0.0:8551
+[2e6e1b4e] 2024/09/09 13:32:01 checking address: 172.17.0.4:8545
+INFO[09-09|10:32:01] API: client ethereumrust started         suite=0 test=5 container=f5d1a703
+[41f56239] Start test (ethereumrust): JWT Authentication: Negative time drift, exceeding limit, correct secret (Paris)
+[41f56239] CLMocker: Adding engine client f5d1a703
+[41f56239] >> (f5d1a703) {"jsonrpc":"2.0","id":1,"method":"engine_exchangeTransitionConfigurationV1","params":[{"terminalTotalDifficulty":"0x30000","terminalBlockHash":"0x0000000000000000000000000000000000000000000000000000000000000000","terminalBlockNumber":"0x0"}]}
+[41f56239] << (f5d1a703) {"id":1,"jsonrpc":"2.0","error":{"code":-32000,"message":"Auth failed: Invalid iat claim"}}
+[41f56239] CLMocker: Closing engine client f5d1a703
+[41f56239] CLMocker: Closed engine client f5d1a703
+[41f56239] End test (ethereumrust): JWT Authentication: Negative time drift, exceeding limit, correct secret (Paris)
+INFO[09-09|10:32:01] API: test ended                          suite=0 test=5 pass=true
+INFO[09-09|10:32:01] API: test started                        suite=0 test=6 name="JWT Authentication: Negative time drift, within limit, correct secret (Paris) (ethereumrust)"
+[53bfaa8b] + export RUST_LOG_STYLE=never
+[53bfaa8b] + RUST_LOG_STYLE=never
+[53bfaa8b] + ethereum_rust=./ethereum_rust
+[53bfaa8b] + mv /genesis.json /genesis-input.json
+[53bfaa8b] + jq -f /mapper.jq /genesis-input.json
+[53bfaa8b] Supplied genesis state (trimmed, use --sim.loglevel 4 or 5 for full output):
+[53bfaa8b] + '[' 3 -lt 4 ']'
+[53bfaa8b] + echo 'Supplied genesis state (trimmed, use --sim.loglevel 4 or 5 for full output):'
+[53bfaa8b] + jq 'del(.alloc[] | select(.balance == "0x123450000000000000000"))' /genesis.json
+[53bfaa8b] {
+[53bfaa8b]   "config": {
+[53bfaa8b]     "ethash": {},
+[53bfaa8b]     "chainId": 7,
+[53bfaa8b]     "homesteadBlock": 0,
+[53bfaa8b]     "eip150Block": 0,
+[53bfaa8b]     "eip155Block": 0,
+[53bfaa8b]     "eip158Block": 0,
+[53bfaa8b]     "byzantiumBlock": 0,
+[53bfaa8b]     "constantinopleBlock": 0,
+[53bfaa8b]     "petersburgBlock": 0,
+[53bfaa8b]     "istanbulBlock": 0,
+[53bfaa8b]     "muirGlacierBlock": 0,
+[53bfaa8b]     "berlinBlock": 0,
+[53bfaa8b]     "londonBlock": 0,
+[53bfaa8b]     "mergeNetsplitBlock": 100,
+[53bfaa8b]     "terminalTotalDifficulty": 196608
+[53bfaa8b]   },
+[53bfaa8b]   "nonce": "0x0",
+[53bfaa8b]   "timestamp": "0x1234",
+[53bfaa8b]   "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000658bdf435d810c91414ec09147daa6db624063790000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+[53bfaa8b]   "gasLimit": "0x2fefd8",
+[53bfaa8b]   "difficulty": "0x30000",
+[53bfaa8b]   "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+[53bfaa8b]   "coinbase": "0x0000000000000000000000000000000000000000",
+[53bfaa8b]   "alloc": {
+[53bfaa8b]     "0000000000000000000000000000000000000314": {
+[53bfaa8b]       "code": "0x60606040526000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063a223e05d1461006a578063abd1a0cf1461008d578063abfced1d146100d4578063e05c914a14610110578063e6768b451461014c575b610000565b346100005761007761019d565b6040518082815260200191505060405180910390f35b34610000576100be600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506101a3565b6040518082815260200191505060405180910390f35b346100005761010e600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919080359060200190919050506101ed565b005b346100005761014a600480803590602001909190803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610236565b005b346100005761017960048080359060200190919080359060200190919080359060200190919050506103c4565b60405180848152602001838152602001828152602001935050505060405180910390f35b60005481565b6000600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205490505b919050565b80600160008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055505b5050565b7f6031a8d62d7c95988fa262657cd92107d90ed96e08d8f867d32f26edfe85502260405180905060405180910390a17f47e2689743f14e97f7dcfa5eec10ba1dff02f83b3d1d4b9c07b206cbbda66450826040518082815260200191505060405180910390a1817fa48a6b249a5084126c3da369fbc9b16827ead8cb5cdc094b717d3f1dcd995e2960405180905060405180910390a27f7890603b316f3509577afd111710f9ebeefa15e12f72347d9dffd0d65ae3bade81604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390a18073ffffffffffffffffffffffffffffffffffffffff167f7efef9ea3f60ddc038e50cccec621f86a0195894dc0520482abf8b5c6b659e4160405180905060405180910390a28181604051808381526020018273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019250505060405180910390a05b5050565b6000600060008585859250925092505b935093509390505600a165627a7a72305820aaf842d0d0c35c45622c5263cbb54813d2974d3999c8c38551d7c613ea2bc1170029",
+[53bfaa8b]       "storage": {
+[53bfaa8b]         "0x0000000000000000000000000000000000000000000000000000000000000000": "0x0000000000000000000000000000000000000000000000000000000000001234",
+[53bfaa8b]         "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9": "0x0000000000000000000000000000000000000000000000000000000000000001"
+[53bfaa8b]       },
+[53bfaa8b]       "balance": "0x0"
+[53bfaa8b]     },
+[53bfaa8b]     "0000000000000000000000000000000000000315": {
+[53bfaa8b]       "code": "0x60606040526000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063ef2769ca1461003e575b610000565b3461000057610078600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803590602001909190505061007a565b005b8173ffffffffffffffffffffffffffffffffffffffff166108fc829081150290604051809050600060405180830381858888f1935050505015610106578173ffffffffffffffffffffffffffffffffffffffff167f30a3c50752f2552dcc2b93f5b96866280816a986c0c0408cb6778b9fa198288f826040518082815260200191505060405180910390a25b5b50505600a165627a7a72305820637991fabcc8abad4294bf2bb615db78fbec4edff1635a2647d3894e2daf6a610029",
+[53bfaa8b]       "balance": "0x9999999999999999999999999999999"
+[53bfaa8b]     },
+[53bfaa8b]     "0000000000000000000000000000000000000316": {
+[53bfaa8b]       "code": "0x444355",
+[53bfaa8b]       "balance": "0x0"
+[53bfaa8b]     },
+[53bfaa8b]     "0000000000000000000000000000000000000317": {
+[53bfaa8b]       "code": "0x600160003555",
+[53bfaa8b]       "balance": "0x0"
+[53bfaa8b]     }
+[53bfaa8b]   },
+[53bfaa8b]   "number": "0x0",
+[53bfaa8b]   "gasUsed": "0x0",
+[53bfaa8b]   "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+[53bfaa8b]   "baseFeePerGas": null,
+[53bfaa8b]   "excessBlobGas": null,
+[53bfaa8b]   "blobGasUsed": null
+[53bfaa8b] }
+[53bfaa8b] + echo 'Command flags till now:'
+[53bfaa8b] + echo
+[53bfaa8b] + FLAGS=' --network /genesis.json'
+[53bfaa8b] + set +ex
+[53bfaa8b] Command flags till now:
+[53bfaa8b] 
+[53bfaa8b] Loading initial blockchain...
+[53bfaa8b] Warning: chain.rlp not found.
+[53bfaa8b] Warning: blocks folder not found.
+[53bfaa8b] Running ethereum_rust with flags:  --network /genesis.json --http.addr=0.0.0.0  --authrpc.addr=0.0.0.0  --authrpc.jwtsecret=/jwt.secret
+[53bfaa8b] 2024-09-09T13:32:01.651658Z  WARN ethereum_rust: No bootnodes specified. This node will not be able to connect to the network.
+[53bfaa8b] 2024-09-09T13:32:01.651675Z  INFO ethereum_rust_storage: Starting storage engine (InMemory)
+[53bfaa8b] 2024-09-09T13:32:01.651679Z  INFO ethereum_rust_storage: Started store engine
+[53bfaa8b] 2024-09-09T13:32:01.652518Z  INFO ethereum_rust_storage: Storing initial state from genesis
+[53bfaa8b] 2024-09-09T13:32:01.655374Z  INFO ethereum_rust_net: Starting discovery service at 0.0.0.0:30303
+[53bfaa8b] 2024-09-09T13:32:01.655384Z  INFO ethereum_rust_net: Listening for requests at 0.0.0.0:30303
+[53bfaa8b] 2024-09-09T13:32:01.655415Z  INFO ethereum_rust_rpc: Starting HTTP server at 0.0.0.0:8545
+[53bfaa8b] 2024-09-09T13:32:01.655423Z  INFO ethereum_rust_rpc: Starting Auth-RPC server at 0.0.0.0:8551
+[2e6e1b4e] 2024/09/09 13:32:01 checking address: 172.17.0.4:8545
+INFO[09-09|10:32:01] API: client ethereumrust started         suite=0 test=6 container=53bfaa8b
+[41f56239] Start test (ethereumrust): JWT Authentication: Negative time drift, within limit, correct secret (Paris)
+[41f56239] CLMocker: Adding engine client 53bfaa8b
+[41f56239] >> (53bfaa8b) {"jsonrpc":"2.0","id":1,"method":"engine_exchangeTransitionConfigurationV1","params":[{"terminalTotalDifficulty":"0x30000","terminalBlockHash":"0x0000000000000000000000000000000000000000000000000000000000000000","terminalBlockNumber":"0x0"}]}
+[41f56239] << (53bfaa8b) {"id":1,"jsonrpc":"2.0","error":{"code":-32601,"message":"Method not found"}}
+[41f56239] >> (53bfaa8b) {"jsonrpc":"2.0","id":2,"method":"engine_exchangeTransitionConfigurationV1","params":[{"terminalTotalDifficulty":"0x30000","terminalBlockHash":"0x0000000000000000000000000000000000000000000000000000000000000000","terminalBlockNumber":"0x0"}]}
+[41f56239] << (53bfaa8b) {"id":2,"jsonrpc":"2.0","error":{"code":-32601,"message":"Method not found"}}
+[41f56239] >> (53bfaa8b) {"jsonrpc":"2.0","id":3,"method":"engine_exchangeTransitionConfigurationV1","params":[{"terminalTotalDifficulty":"0x30000","terminalBlockHash":"0x0000000000000000000000000000000000000000000000000000000000000000","terminalBlockNumber":"0x0"}]}
+[41f56239] << (53bfaa8b) {"id":3,"jsonrpc":"2.0","error":{"code":-32601,"message":"Method not found"}}
+[41f56239] >> (53bfaa8b) {"jsonrpc":"2.0","id":4,"method":"engine_exchangeTransitionConfigurationV1","params":[{"terminalTotalDifficulty":"0x30000","terminalBlockHash":"0x0000000000000000000000000000000000000000000000000000000000000000","terminalBlockNumber":"0x0"}]}
+[41f56239] << (53bfaa8b) {"id":4,"jsonrpc":"2.0","error":{"code":-32601,"message":"Method not found"}}
+[41f56239] >> (53bfaa8b) {"jsonrpc":"2.0","id":5,"method":"engine_exchangeTransitionConfigurationV1","params":[{"terminalTotalDifficulty":"0x30000","terminalBlockHash":"0x0000000000000000000000000000000000000000000000000000000000000000","terminalBlockNumber":"0x0"}]}
+[41f56239] << (53bfaa8b) {"id":5,"jsonrpc":"2.0","error":{"code":-32601,"message":"Method not found"}}
+[41f56239] >> (53bfaa8b) {"jsonrpc":"2.0","id":6,"method":"engine_exchangeTransitionConfigurationV1","params":[{"terminalTotalDifficulty":"0x30000","terminalBlockHash":"0x0000000000000000000000000000000000000000000000000000000000000000","terminalBlockNumber":"0x0"}]}
+[41f56239] << (53bfaa8b) {"id":6,"jsonrpc":"2.0","error":{"code":-32601,"message":"Method not found"}}
+[41f56239] FAIL (JWT Authentication: Negative time drift, within limit, correct secret): Authentication was supposed to pass authentication but failed: Method not found
+[41f56239] CLMocker: Closing engine client 53bfaa8b
+[41f56239] CLMocker: Closed engine client 53bfaa8b
+[41f56239] End test (ethereumrust): JWT Authentication: Negative time drift, within limit, correct secret (Paris)
+INFO[09-09|10:32:07] API: test ended                          suite=0 test=6 pass=false
+INFO[09-09|10:32:07] API: test started                        suite=0 test=7 name="JWT Authentication: Positive time drift, exceeding limit, correct secret (Paris) (ethereumrust)"
+[313f3aa1] + export RUST_LOG_STYLE=never
+[313f3aa1] + RUST_LOG_STYLE=never
+[313f3aa1] + ethereum_rust=./ethereum_rust
+[313f3aa1] + mv /genesis.json /genesis-input.json
+[313f3aa1] + jq -f /mapper.jq /genesis-input.json
+[313f3aa1] + '[' 3 -lt 4 ']'
+[313f3aa1] + echo 'Supplied genesis state (trimmed, use --sim.loglevel 4 or 5 for full output):'
+[313f3aa1] + jq 'del(.alloc[] | select(.balance == "0x123450000000000000000"))' /genesis.json
+[313f3aa1] Supplied genesis state (trimmed, use --sim.loglevel 4 or 5 for full output):
+[313f3aa1] {
+[313f3aa1]   "config": {
+[313f3aa1]     "ethash": {},
+[313f3aa1]     "chainId": 7,
+[313f3aa1]     "homesteadBlock": 0,
+[313f3aa1]     "eip150Block": 0,
+[313f3aa1]     "eip155Block": 0,
+[313f3aa1]     "eip158Block": 0,
+[313f3aa1]     "byzantiumBlock": 0,
+[313f3aa1]     "constantinopleBlock": 0,
+[313f3aa1]     "petersburgBlock": 0,
+[313f3aa1]     "istanbulBlock": 0,
+[313f3aa1]     "muirGlacierBlock": 0,
+[313f3aa1]     "berlinBlock": 0,
+[313f3aa1]     "londonBlock": 0,
+[313f3aa1]     "mergeNetsplitBlock": 100,
+[313f3aa1]     "terminalTotalDifficulty": 196608
+[313f3aa1]   },
+[313f3aa1]   "nonce": "0x0",
+[313f3aa1]   "timestamp": "0x1234",
+[313f3aa1]   "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000658bdf435d810c91414ec09147daa6db624063790000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+[313f3aa1]   "gasLimit": "0x2fefd8",
+[313f3aa1]   "difficulty": "0x30000",
+[313f3aa1]   "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+[313f3aa1]   "coinbase": "0x0000000000000000000000000000000000000000",
+[313f3aa1]   "alloc": {
+[313f3aa1]     "0000000000000000000000000000000000000314": {
+[313f3aa1]       "code": "0x60606040526000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063a223e05d1461006a578063abd1a0cf1461008d578063abfced1d146100d4578063e05c914a14610110578063e6768b451461014c575b610000565b346100005761007761019d565b6040518082815260200191505060405180910390f35b34610000576100be600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506101a3565b6040518082815260200191505060405180910390f35b346100005761010e600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919080359060200190919050506101ed565b005b346100005761014a600480803590602001909190803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610236565b005b346100005761017960048080359060200190919080359060200190919080359060200190919050506103c4565b60405180848152602001838152602001828152602001935050505060405180910390f35b60005481565b6000600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205490505b919050565b80600160008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055505b5050565b7f6031a8d62d7c95988fa262657cd92107d90ed96e08d8f867d32f26edfe85502260405180905060405180910390a17f47e2689743f14e97f7dcfa5eec10ba1dff02f83b3d1d4b9c07b206cbbda66450826040518082815260200191505060405180910390a1817fa48a6b249a5084126c3da369fbc9b16827ead8cb5cdc094b717d3f1dcd995e2960405180905060405180910390a27f7890603b316f3509577afd111710f9ebeefa15e12f72347d9dffd0d65ae3bade81604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390a18073ffffffffffffffffffffffffffffffffffffffff167f7efef9ea3f60ddc038e50cccec621f86a0195894dc0520482abf8b5c6b659e4160405180905060405180910390a28181604051808381526020018273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019250505060405180910390a05b5050565b6000600060008585859250925092505b935093509390505600a165627a7a72305820aaf842d0d0c35c45622c5263cbb54813d2974d3999c8c38551d7c613ea2bc1170029",
+[313f3aa1]       "storage": {
+[313f3aa1]         "0x0000000000000000000000000000000000000000000000000000000000000000": "0x0000000000000000000000000000000000000000000000000000000000001234",
+[313f3aa1]         "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9": "0x0000000000000000000000000000000000000000000000000000000000000001"
+[313f3aa1]       },
+[313f3aa1]       "balance": "0x0"
+[313f3aa1]     },
+[313f3aa1]     "0000000000000000000000000000000000000315": {
+[313f3aa1]       "code": "0x60606040526000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063ef2769ca1461003e575b610000565b3461000057610078600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803590602001909190505061007a565b005b8173ffffffffffffffffffffffffffffffffffffffff166108fc829081150290604051809050600060405180830381858888f1935050505015610106578173ffffffffffffffffffffffffffffffffffffffff167f30a3c50752f2552dcc2b93f5b96866280816a986c0c0408cb6778b9fa198288f826040518082815260200191505060405180910390a25b5b50505600a165627a7a72305820637991fabcc8abad4294bf2bb615db78fbec4edff1635a2647d3894e2daf6a610029",
+[313f3aa1]       "balance": "0x9999999999999999999999999999999"
+[313f3aa1]     },
+[313f3aa1]     "0000000000000000000000000000000000000316": {
+[313f3aa1]       "code": "0x444355",
+[313f3aa1]       "balance": "0x0"
+[313f3aa1]     },
+[313f3aa1]     "0000000000000000000000000000000000000317": {
+[313f3aa1]       "code": "0x600160003555",
+[313f3aa1]       "balance": "0x0"
+[313f3aa1]     }
+[313f3aa1]   },
+[313f3aa1]   "number": "0x0",
+[313f3aa1]   "gasUsed": "0x0",
+[313f3aa1]   "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+[313f3aa1]   "baseFeePerGas": null,
+[313f3aa1]   "excessBlobGas": null,
+[313f3aa1]   "blobGasUsed": null
+[313f3aa1] }
+[313f3aa1] + echo 'Command flags till now:'
+[313f3aa1] + echo
+[313f3aa1] + FLAGS=' --network /genesis.json'
+[313f3aa1] + set +ex
+[313f3aa1] Command flags till now:
+[313f3aa1] 
+[313f3aa1] Loading initial blockchain...
+[313f3aa1] Warning: chain.rlp not found.
+[313f3aa1] Warning: blocks folder not found.
+[313f3aa1] Running ethereum_rust with flags:  --network /genesis.json --http.addr=0.0.0.0  --authrpc.addr=0.0.0.0  --authrpc.jwtsecret=/jwt.secret
+[313f3aa1] 2024-09-09T13:32:07.310997Z  WARN ethereum_rust: No bootnodes specified. This node will not be able to connect to the network.
+[313f3aa1] 2024-09-09T13:32:07.311013Z  INFO ethereum_rust_storage: Starting storage engine (InMemory)
+[313f3aa1] 2024-09-09T13:32:07.311017Z  INFO ethereum_rust_storage: Started store engine
+[313f3aa1] 2024-09-09T13:32:07.311896Z  INFO ethereum_rust_storage: Storing initial state from genesis
+[313f3aa1] 2024-09-09T13:32:07.314975Z  INFO ethereum_rust_net: Starting discovery service at 0.0.0.0:30303
+[313f3aa1] 2024-09-09T13:32:07.314982Z  INFO ethereum_rust_net: Listening for requests at 0.0.0.0:30303
+[313f3aa1] 2024-09-09T13:32:07.315016Z  INFO ethereum_rust_rpc: Starting HTTP server at 0.0.0.0:8545
+[313f3aa1] 2024-09-09T13:32:07.315026Z  INFO ethereum_rust_rpc: Starting Auth-RPC server at 0.0.0.0:8551
+[2e6e1b4e] 2024/09/09 13:32:07 checking address: 172.17.0.4:8545
+INFO[09-09|10:32:07] API: client ethereumrust started         suite=0 test=7 container=313f3aa1
+[41f56239] Start test (ethereumrust): JWT Authentication: Positive time drift, exceeding limit, correct secret (Paris)
+[41f56239] CLMocker: Adding engine client 313f3aa1
+[41f56239] >> (313f3aa1) {"jsonrpc":"2.0","id":1,"method":"engine_exchangeTransitionConfigurationV1","params":[{"terminalTotalDifficulty":"0x30000","terminalBlockHash":"0x0000000000000000000000000000000000000000000000000000000000000000","terminalBlockNumber":"0x0"}]}
+[41f56239] << (313f3aa1) {"id":1,"jsonrpc":"2.0","error":{"code":-32000,"message":"Auth failed: Invalid iat claim"}}
+[41f56239] CLMocker: Closing engine client 313f3aa1
+[41f56239] CLMocker: Closed engine client 313f3aa1
+[41f56239] End test (ethereumrust): JWT Authentication: Positive time drift, exceeding limit, correct secret (Paris)
+INFO[09-09|10:32:07] API: test ended                          suite=0 test=7 pass=true
+INFO[09-09|10:32:07] API: test started                        suite=0 test=8 name="JWT Authentication: Positive time drift, within limit, correct secret (Paris) (ethereumrust)"
+[98d8ad29] + export RUST_LOG_STYLE=never
+[98d8ad29] + RUST_LOG_STYLE=never
+[98d8ad29] + ethereum_rust=./ethereum_rust
+[98d8ad29] + mv /genesis.json /genesis-input.json
+[98d8ad29] + jq -f /mapper.jq /genesis-input.json
+[98d8ad29] + '[' 3 -lt 4 ']'
+[98d8ad29] + echo 'Supplied genesis state (trimmed, use --sim.loglevel 4 or 5 for full output):'
+[98d8ad29] + jq 'del(.alloc[] | select(.balance == "0x123450000000000000000"))' /genesis.json
+[98d8ad29] Supplied genesis state (trimmed, use --sim.loglevel 4 or 5 for full output):
+[98d8ad29] {
+[98d8ad29]   "config": {
+[98d8ad29]     "ethash": {},
+[98d8ad29]     "chainId": 7,
+[98d8ad29]     "homesteadBlock": 0,
+[98d8ad29]     "eip150Block": 0,
+[98d8ad29]     "eip155Block": 0,
+[98d8ad29]     "eip158Block": 0,
+[98d8ad29]     "byzantiumBlock": 0,
+[98d8ad29]     "constantinopleBlock": 0,
+[98d8ad29]     "petersburgBlock": 0,
+[98d8ad29]     "istanbulBlock": 0,
+[98d8ad29]     "muirGlacierBlock": 0,
+[98d8ad29]     "berlinBlock": 0,
+[98d8ad29]     "londonBlock": 0,
+[98d8ad29]     "mergeNetsplitBlock": 100,
+[98d8ad29]     "terminalTotalDifficulty": 196608
+[98d8ad29]   },
+[98d8ad29]   "nonce": "0x0",
+[98d8ad29]   "timestamp": "0x1234",
+[98d8ad29]   "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000658bdf435d810c91414ec09147daa6db624063790000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+[98d8ad29]   "gasLimit": "0x2fefd8",
+[98d8ad29]   "difficulty": "0x30000",
+[98d8ad29]   "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+[98d8ad29]   "coinbase": "0x0000000000000000000000000000000000000000",
+[98d8ad29]   "alloc": {
+[98d8ad29]     "0000000000000000000000000000000000000314": {
+[98d8ad29]       "code": "0x60606040526000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063a223e05d1461006a578063abd1a0cf1461008d578063abfced1d146100d4578063e05c914a14610110578063e6768b451461014c575b610000565b346100005761007761019d565b6040518082815260200191505060405180910390f35b34610000576100be600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506101a3565b6040518082815260200191505060405180910390f35b346100005761010e600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919080359060200190919050506101ed565b005b346100005761014a600480803590602001909190803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610236565b005b346100005761017960048080359060200190919080359060200190919080359060200190919050506103c4565b60405180848152602001838152602001828152602001935050505060405180910390f35b60005481565b6000600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205490505b919050565b80600160008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055505b5050565b7f6031a8d62d7c95988fa262657cd92107d90ed96e08d8f867d32f26edfe85502260405180905060405180910390a17f47e2689743f14e97f7dcfa5eec10ba1dff02f83b3d1d4b9c07b206cbbda66450826040518082815260200191505060405180910390a1817fa48a6b249a5084126c3da369fbc9b16827ead8cb5cdc094b717d3f1dcd995e2960405180905060405180910390a27f7890603b316f3509577afd111710f9ebeefa15e12f72347d9dffd0d65ae3bade81604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390a18073ffffffffffffffffffffffffffffffffffffffff167f7efef9ea3f60ddc038e50cccec621f86a0195894dc0520482abf8b5c6b659e4160405180905060405180910390a28181604051808381526020018273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019250505060405180910390a05b5050565b6000600060008585859250925092505b935093509390505600a165627a7a72305820aaf842d0d0c35c45622c5263cbb54813d2974d3999c8c38551d7c613ea2bc1170029",
+[98d8ad29]       "storage": {
+[98d8ad29]         "0x0000000000000000000000000000000000000000000000000000000000000000": "0x0000000000000000000000000000000000000000000000000000000000001234",
+[98d8ad29]         "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9": "0x0000000000000000000000000000000000000000000000000000000000000001"
+[98d8ad29]       },
+[98d8ad29]       "balance": "0x0"
+[98d8ad29]     },
+[98d8ad29]     "0000000000000000000000000000000000000315": {
+[98d8ad29]       "code": "0x60606040526000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063ef2769ca1461003e575b610000565b3461000057610078600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803590602001909190505061007a565b005b8173ffffffffffffffffffffffffffffffffffffffff166108fc829081150290604051809050600060405180830381858888f1935050505015610106578173ffffffffffffffffffffffffffffffffffffffff167f30a3c50752f2552dcc2b93f5b96866280816a986c0c0408cb6778b9fa198288f826040518082815260200191505060405180910390a25b5b50505600a165627a7a72305820637991fabcc8abad4294bf2bb615db78fbec4edff1635a2647d3894e2daf6a610029",
+[98d8ad29]       "balance": "0x9999999999999999999999999999999"
+[98d8ad29]     },
+[98d8ad29]     "0000000000000000000000000000000000000316": {
+[98d8ad29]       "code": "0x444355",
+[98d8ad29]       "balance": "0x0"
+[98d8ad29]     },
+[98d8ad29]     "0000000000000000000000000000000000000317": {
+[98d8ad29]       "code": "0x600160003555",
+[98d8ad29]       "balance": "0x0"
+[98d8ad29]     }
+[98d8ad29]   },
+[98d8ad29]   "number": "0x0",
+[98d8ad29]   "gasUsed": "0x0",
+[98d8ad29]   "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+[98d8ad29]   "baseFeePerGas": null,
+[98d8ad29]   "excessBlobGas": null,
+[98d8ad29]   "blobGasUsed": null
+[98d8ad29] }
+[98d8ad29] Command flags till now:
+[98d8ad29] 
+[98d8ad29] Loading initial blockchain...
+[98d8ad29] + echo 'Command flags till now:'
+[98d8ad29] + echo
+[98d8ad29] + FLAGS=' --network /genesis.json'
+[98d8ad29] + set +ex
+[98d8ad29] Warning: chain.rlp not found.
+[98d8ad29] Warning: blocks folder not found.
+[98d8ad29] Running ethereum_rust with flags:  --network /genesis.json --http.addr=0.0.0.0  --authrpc.addr=0.0.0.0  --authrpc.jwtsecret=/jwt.secret
+[98d8ad29] 2024-09-09T13:32:08.012310Z  WARN ethereum_rust: No bootnodes specified. This node will not be able to connect to the network.
+[98d8ad29] 2024-09-09T13:32:08.012329Z  INFO ethereum_rust_storage: Starting storage engine (InMemory)
+[98d8ad29] 2024-09-09T13:32:08.012333Z  INFO ethereum_rust_storage: Started store engine
+[98d8ad29] 2024-09-09T13:32:08.013190Z  INFO ethereum_rust_storage: Storing initial state from genesis
+[98d8ad29] 2024-09-09T13:32:08.016235Z  INFO ethereum_rust_net: Starting discovery service at 0.0.0.0:30303
+[98d8ad29] 2024-09-09T13:32:08.016246Z  INFO ethereum_rust_net: Listening for requests at 0.0.0.0:30303
+[98d8ad29] 2024-09-09T13:32:08.016281Z  INFO ethereum_rust_rpc: Starting HTTP server at 0.0.0.0:8545
+[98d8ad29] 2024-09-09T13:32:08.016290Z  INFO ethereum_rust_rpc: Starting Auth-RPC server at 0.0.0.0:8551
+[2e6e1b4e] 2024/09/09 13:32:08 checking address: 172.17.0.4:8545
+INFO[09-09|10:32:08] API: client ethereumrust started         suite=0 test=8 container=98d8ad29
+[41f56239] Start test (ethereumrust): JWT Authentication: Positive time drift, within limit, correct secret (Paris)
+[41f56239] CLMocker: Adding engine client 98d8ad29
+[41f56239] >> (98d8ad29) {"jsonrpc":"2.0","id":1,"method":"engine_exchangeTransitionConfigurationV1","params":[{"terminalTotalDifficulty":"0x30000","terminalBlockHash":"0x0000000000000000000000000000000000000000000000000000000000000000","terminalBlockNumber":"0x0"}]}
+[41f56239] << (98d8ad29) {"id":1,"jsonrpc":"2.0","error":{"code":-32601,"message":"Method not found"}}
+[41f56239] >> (98d8ad29) {"jsonrpc":"2.0","id":2,"method":"engine_exchangeTransitionConfigurationV1","params":[{"terminalTotalDifficulty":"0x30000","terminalBlockHash":"0x0000000000000000000000000000000000000000000000000000000000000000","terminalBlockNumber":"0x0"}]}
+[41f56239] << (98d8ad29) {"id":2,"jsonrpc":"2.0","error":{"code":-32601,"message":"Method not found"}}
+[41f56239] >> (98d8ad29) {"jsonrpc":"2.0","id":3,"method":"engine_exchangeTransitionConfigurationV1","params":[{"terminalTotalDifficulty":"0x30000","terminalBlockHash":"0x0000000000000000000000000000000000000000000000000000000000000000","terminalBlockNumber":"0x0"}]}
+[41f56239] << (98d8ad29) {"id":3,"jsonrpc":"2.0","error":{"code":-32601,"message":"Method not found"}}
+[41f56239] >> (98d8ad29) {"jsonrpc":"2.0","id":4,"method":"engine_exchangeTransitionConfigurationV1","params":[{"terminalTotalDifficulty":"0x30000","terminalBlockHash":"0x0000000000000000000000000000000000000000000000000000000000000000","terminalBlockNumber":"0x0"}]}
+[41f56239] << (98d8ad29) {"id":4,"jsonrpc":"2.0","error":{"code":-32601,"message":"Method not found"}}
+[41f56239] >> (98d8ad29) {"jsonrpc":"2.0","id":5,"method":"engine_exchangeTransitionConfigurationV1","params":[{"terminalTotalDifficulty":"0x30000","terminalBlockHash":"0x0000000000000000000000000000000000000000000000000000000000000000","terminalBlockNumber":"0x0"}]}
+[41f56239] << (98d8ad29) {"id":5,"jsonrpc":"2.0","error":{"code":-32601,"message":"Method not found"}}
+[41f56239] >> (98d8ad29) {"jsonrpc":"2.0","id":6,"method":"engine_exchangeTransitionConfigurationV1","params":[{"terminalTotalDifficulty":"0x30000","terminalBlockHash":"0x0000000000000000000000000000000000000000000000000000000000000000","terminalBlockNumber":"0x0"}]}
+[41f56239] << (98d8ad29) {"id":6,"jsonrpc":"2.0","error":{"code":-32601,"message":"Method not found"}}
+[41f56239] FAIL (JWT Authentication: Positive time drift, within limit, correct secret): Authentication was supposed to pass authentication but failed: Method not found
+[41f56239] CLMocker: Closing engine client 98d8ad29
+[41f56239] CLMocker: Closed engine client 98d8ad29
+[41f56239] End test (ethereumrust): JWT Authentication: Positive time drift, within limit, correct secret (Paris)
+INFO[09-09|10:32:13] API: test ended                          suite=0 test=8 pass=false
+INFO[09-09|10:32:13] API: test ended                          suite=0 test=1 pass=true
+INFO[09-09|10:32:13] API: suite ended                         suite=0
+INFO[09-09|10:32:13] simulation ethereum/engine finished      suites=1 tests=8 failed=3
+3 tests failed
